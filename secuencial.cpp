@@ -2,6 +2,8 @@
 using namespace std;
 
 int secuencialDes(double a[], int, double);
+int secuencialOrd(double a[], int, double);
+void interDirDer(double a[], int);
 void imprimir(double a[], int);
 
 int main(){
@@ -41,6 +43,9 @@ int main(){
 				cout << secuencialDes(arr, tamanio, valor);
 				break;
 			case 'b':
+				interDirDer(copia, tamanio);
+				cout << "Arreglo ordenado: "; imprimir(copia, tamanio); cout << endl;
+				cout << "Posicion del elemento: " << secuencialOrd(copia, tamanio, valor);
 				break;
 			case 'c':
 				cout << "Saliendo..." << endl;
@@ -65,6 +70,33 @@ int secuencialDes(double a[], int n, double dato){
 		pos=i;
 	}
 	return pos;
+}
+int secuencialOrd(double a[], int n, double dato){
+	
+	int i=0;
+	int pos;
+	while(i<n && a[i]<dato){
+		i++;
+	}
+	if(i>n || a[i]!=dato){
+		pos=-i;
+	} else {
+		pos=i;
+	}
+	return pos;
+}
+
+void interDirDer(double a[], int n){
+	
+	for(int i=0; i<n-1; i++){
+		for(int j=0; j<n-i-1; j++){
+			if(a[j]>a[j+1]){
+				double aux=a[j];
+				a[j]=a[j+1];
+				a[j+1]=aux;
+			}
+		}
+	}
 }
 
 void imprimir(double a[], int n){
