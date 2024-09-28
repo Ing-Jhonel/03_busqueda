@@ -27,7 +27,7 @@ int main(){
 		cout << "Indique el elemento a buscar con busqueda binaria: ";
 		cin >> valor;
 		cout << "Posicion del elemento: " << binaria(copia, tamanio, valor) << endl << endl;
-		cout << "Â¿Desea buscar mas?(s/n): ";
+		cout << "¿Desea buscar mas?(s/n): ";
 		cin >> buscar;
 		cout << endl;
 	} while(buscar!='n');
