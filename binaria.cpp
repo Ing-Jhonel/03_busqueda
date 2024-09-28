@@ -11,7 +11,7 @@ int main(){
 	cout << "Indique el tamanio del arreglo: ";
 	cin >> tamanio;
 	double arr[tamanio];
-	double copia[tamanio];
+	double copia[tamanio]; 
 	for(int i=0; i<tamanio; i++){
 		cout << i+1 << ". elemento: ";
 		cin >> arr[i];
